@@ -6,7 +6,7 @@
 <body>
 <h1>My Biodata</h1>
 <p>Nama : cathy chiristina.</p>
-<p>Skills: Komputer</p>
+<p>Skills: Menyanyi</p>
   <a href="https://Instagram.com/cthylvvvv">My Instagram</a>
 
 </body>
