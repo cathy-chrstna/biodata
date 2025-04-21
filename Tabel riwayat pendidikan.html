@@ -2,38 +2,61 @@
 <html>
 <head>
 <style>
-table, th, td {border: 1px solid black;}
-  
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
 </style>
 </head>
 <body>
 
-<h1 style="text-align:center;">Riwayat Pendidikan</h1>
+<h2>HTML Table</h2>
 
-<table style="width:100%">
+<table>
   <tr>
-    <th>Tahun Lulus</th>
-    <th>Sekolah</th>
+    <th>Tingkat pendidikan</th>
+    <th>Tahun lulus</th>
+    <th>Asal sekolah</th>
     <th>Kota</th>
   </tr>
   <tr>
+    <td>SD/td>
+    <td>SMP</td>
+    <td>SMA</td>
+  </tr>
+  <tr>
     <td>2016</td>
-    <td>SDK 077 Kewapante</td>
-    <td>Maumere</td>
-  </tr>
-  <tr>
-    <td>2019</td>
-    <td>SMPK Virgo Fidelis</td>
-    <td>Maumere</td>
-  </tr>
-  <tr>
+    <td>2020</td>
     <td>2023</td>
-    <td>SMASK Bhaktyarsa</td>
+  </tr>
+  <tr>
+    <td>SDK 077 Kewapante</td>
+    <td>SMP Virgo Fidelis Maumere</td>
+    <td>SMASK Bhaktyarsa Maumere</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Helen Bennett</td>
+    <td>UK</td>
+  </tr>
+  <tr>
     <td>Maumere</td>
+    <td>Maumere</td>
+    <td>Maumere</td>
+ 
   </tr>
 </table>
-
-<p>Tabel ini menunjukkan riwayat pendidikan cathy berdasarkan tahun lulus.</p>
 
 </body>
 </html>
