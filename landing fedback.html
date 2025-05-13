@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aeris Beauty</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Product Card Styles */
+        .product-image-container {
+            width: 180px;
+            height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 16px;
+            background-color: white;
+            border-radius: 12px;
+            padding: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .product-image {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+
+        /* Product Background Colors */
+        .product-bg-1 {
+            background-color: #FFF9E6;
+            border-top: 4px solid #F59E0B;
+        }
+        
+        .product-bg-2 {
+            background-color: #FEE2E2;
+            border-top: 4px solid #EF4444;
+        }
+        
+        .product-bg-3 {
+            background-color: #ECFDF5;
+            border-top: 4px solid #10B981;
+        }
+
+        /* About Section Gradient */
+        .about-gradient-bg {
+            background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+        }
+
+        /* Logo Container */
+        .logo-container {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            border-radius: 50%;
+            padding: 20px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo-img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        /* Page Transition */
+        .page {
+            display: none;
+        }
+        
+        .page.active {
+            display: block;
+        }
+
+        /* Contact Form Styles */
+        .gform-iframe {
+            width: 100%;
+            height: 1200px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-gray-800">Aeris Beauty</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#home" class="nav-link text-gray-600 hover:text-purple-500" data-page="home">Home</a></li>
+                    <li><a href="#about" class="nav-link text-gray-600 hover:text-purple-500" data-page="about">About</a></li>
+                    <li><a href="#feedback" class="nav-link text-gray-600 hover:text-purple-500" data-page="feedback">feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+       
+        <div id="home-page" class="page active">
+            <section class="bg-purple-500 text-white py-20">
+                <div class="container mx-auto text-center">
+                    <h2 class="text-4xl font-bold mb-4">Welcome to Aeris Beauty Product</h2>
+                    <p class="mb-6">Discover the best way to upgrade your beauty.</p>
+                    <a href="#products" class="bg-white text-purple-500 px-6 py-3 rounded-full shadow-md hover:bg-gray-100 transition duration-300">View Products</a>
+                </div>
+            </section>
+
+            <section id="products" class="py-16">
+                <div class="container mx-auto text-center">
+                    <h3 class="text-3xl font-bold mb-12">Our Products</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+                        <div class="product-card product-bg-1 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                            <div class="product-image-container">
+                                <img src="https://images-static.nykaa.com/media/catalog/product/a/3/a37eef18901030644863_01.jpg" 
+                                     alt="Radiance Serum Glow" 
+                                     class="product-image">
+                            </div>
+                            <h4 class="text-xl font-bold mb-2 text-gray-800">Radiance Serum Glow</h4>
+                            <p class="mb-3 text-gray-600">Mencerahkan kulit, mengurangi noda hitam, dan membuat kulit tampak lebih glowing.</p>
+                            <p class="font-bold text-yellow-600">Rp 150.000,00</p>
+                        </div>
+                        
+                        <div class="product-card product-bg-2 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                            <div class="product-image-container">
+                                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQNdEQNymzHRxlYrxufG2iUgVRWrqLe8ij1_EnOU4GYZdUmnMVBK5w_BDv4ZLaSHZTJ5oEdFMBR9fX6qOp06v3bfmgD9cXBDd2A0GAcHi0qvNmpbhr716DLAQ" 
+                                     alt="Hyder Glow Moisturizer" 
+                                     class="product-image">
+                            </div>
+                            <h4 class="text-xl font-bold mb-2 text-gray-800">Hyder Glow Moisturizer</h4>
+                            <p class="mb-3 text-gray-600">Melembapkan kulit, mengunci hidrasi, membuat kulit terasa kenyal dan halus.</p>
+                            <p class="font-bold text-red-500">Rp 250.000,00</p>
+                        </div>
+                        
+                        <div class="product-card product-bg-3 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                            <div class="product-image-container">
+                                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTOMsle-TbVlFD1PXJo8VhjsMR4_D6xr2eWEmHOqE7gxgygcCTt4a9bN3pjpc7ZIZJsi62LjUuVWTTlfQcgORn_MuT3lnqFzNFWQnD6yWptFcxH_AzFzrfad0Y" 
+                                     alt="Gentle Purifying Cleanser" 
+                                     class="product-image">
+                            </div>
+                            <h4 class="text-xl font-bold mb-2 text-gray-800">Gentle Purifying Cleanser</h4>
+                            <p class="mb-3 text-gray-600">Membersihkan kotoran dan makeup tanpa membuat kulit kering atau iritasi.</p>
+                            <p class="font-bold text-green-500">Rp 100.000,00</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="about-page" class="page">
+            <section class="about-gradient-bg text-white py-20">
+                <div class="container mx-auto px-4">
+                    <div class="logo-container mb-12">
+                        <img src="https://images.glints.com/unsafe/glints-dashboard.oss-ap-southeast-1.aliyuncs.com/company-logo/f21ff6a91a8fe04bc933a7e3752256cb.png" 
+                             alt="Aeris Beauty Logo" 
+                             class="logo-img">
+                    </div>
+                    
+                    <div class="max-w-4xl mx-auto text-center">
+                        <h1 class="text-4xl font-bold mb-6">About Aeris Beauty</h1>
+                        
+                        <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl mb-8">
+                            <p class="mb-6 text-lg">
+                                Aeris Beauty was founded in 2021 with a simple mission: to create high-quality, 
+                                affordable beauty products that deliver visible results. Our name "Aeris" 
+                                comes from the Latin word for "air," representing our commitment to light, 
+                                breathable formulas that work in harmony with your skin.
+                            </p>
+                            
+                            <p class="mb-6 text-lg">
+                                We combine cutting-edge scientific research with carefully selected natural 
+                                ingredients to develop products that are effective yet gentle on all skin types.
+                            </p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                            <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
+                                <h3 class="text-xl font-bold mb-3">Our Vision</h3>
+                                <p>To revolutionize the beauty industry by making professional-grade skincare accessible to everyone.</p>
+                            </div>
+                            
+                            <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
+                                <h3 class="text-xl font-bold mb-3">Our Values</h3>
+                                <p>Transparency, Innovation, Sustainability, and Customer Satisfaction at our core.</p>
+                            </div>
+                            
+                            <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
+                                <h3 class="text-xl font-bold mb-3">Our Promise</h3>
+                                <p>100% cruelty-free products with no harmful additives or unnecessary fillers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="py-16 bg-white">
+                <div class="container mx-auto px-4 text-center">
+                    <h2 class="text-3xl font-bold mb-12 text-gray-800">Our Team</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                        <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+                            <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-purple-100 overflow-hidden">
+                                <img src="https://cdn0-production-images-kly.akamaized.net/1CHq6L1sLiPzftR7e5O8qikB5aA=/800x1066/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3455143/original/054438300_1620797771-155960051_465840584571521_6332323802944561063_n.jpg" alt="Founder" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">Han So Hee</h3>
+                            <p class="text-purple-600 mb-2">Founder & CEO</p>
+                            <p class="text-gray-600">With 15 years in cosmetic chemistry, Han So Hee leads our product development.</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+                            <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-pink-100 overflow-hidden">
+                                <img src="https://i.pinimg.com/736x/b7/57/14/b757148bba7fd5dc1240e555175ccc88.jpg" alt="CMO" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">Song Kang</h3>
+                            <p class="text-pink-600 mb-2">Chief Marketing Officer</p>
+                            <p class="text-gray-600">Song Kang brings innovative strategies to share our products with the world.</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+                            <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-indigo-100 overflow-hidden">
+                                <img src="https://editorial.femaledaily.com/wp-content/uploads/2022/12/Goo-Yoon-Jung-1.png" alt="R&D" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">Go Yoon Jung</h3>
+                            <p class="text-indigo-600 mb-2">Head of Research</p>
+                            <p class="text-gray-600">Go Yoon Jung our formulations meet the highest scientific standards.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="Feedback" class="page">
+            <section class="py-16 bg-white">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-4xl mx-auto">
+                        <h2 class="text-3xl font-bold text-center mb-8">Evaluasi Customer</h2>
+                        <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf5cJ8o8b2NAhJV61ykYqQO6tj5y8WMrpmVa8tcCQoATT5t5g/viewform?usp=pp_url=true" 
+                                    class="gform-iframe">
+                             
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Aeris Beauty. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Get the target page from data attribute
+                    const targetPage = this.getAttribute('data-page');
+                    
+                    // Hide all pages
+                    document.querySelectorAll('.page').forEach(page => {
+                        page.classList.remove('active');
+                    });
+                    
+                    // Show the target page
+                    document.getElementById(`${targetPage}-page`).classList.add('active');
+                    
+                    // Update active link styling
+                    navLinks.forEach(navLink => {
+                        navLink.classList.remove('text-purple-500', 'font-bold');
+                    });
+                    this.classList.add('text-purple-500', 'font-bold');
+                    
+                    // Scroll to top
+                    window.scrollTo(0, 0);
+                });
+            });
+            
+            // Set home as active by default
+            document.querySelector('[data-page="home"]').classList.add('text-purple-500', 'font-bold');
+        });
+    </script>
+</body>
+</html>
