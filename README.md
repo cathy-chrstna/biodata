@@ -5,7 +5,7 @@
 </head>
 <body>
 <h1>My Biodata</h1>
-<p>Nama : cathy chiristina</p>
+<p>Nama : Cathy Chiristina</p>
 <p>Skills: Menyanyi</p>
 <p></p><a href="instagram.com"/cthylvvvv>My Instagram</a></p>
 <p></p><a href="tabel.html">Riwayat Pendidikan</a></p>
